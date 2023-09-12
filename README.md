@@ -97,12 +97,12 @@ Bonus step. Nothing to do with xMAPI. Used to stringify a JSON object, so it dis
  
 	
 3. OPTIONAL. By default, only the importing user has permission to use and modify the custom steps within the workflow. We recommend broadening permissions to allow all users with the Developer role to be able to use and/or edit the new flow steps. To do this, shift to the FLOW DESIGNER tab, just to the right of FORMS. Open the <b>Run Flow Step</b> flow canvas.
-4. 
+
 	<kbd>  <img src="/media/run_flow_step_canvas.png" width="750"> </kbd>
  
 	
-5. To the right of the screen on the Palette, highlight the CUSTOM tab. Navigate to each new flow step in turn. Click the gear icon then Usage Permissions. In the pop-up window, grant ACCESS to other users/roles as required, e.g. select the Developer role and grant permission to Edit Step.
-6. 
+4. To the right of the screen on the Palette, highlight the CUSTOM tab. Navigate to each new flow step in turn. Click the gear icon then Usage Permissions. In the pop-up window, grant ACCESS to other users/roles as required, e.g. select the Developer role and grant permission to Edit Step.
+ 
 	<kbd>  <img src="/media/step_usage_permissions.png" width="500"> </kbd>
 
 
