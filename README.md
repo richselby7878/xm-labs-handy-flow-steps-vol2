@@ -20,58 +20,68 @@ As with [Handy Flow Steps Volume 1](https://github.com/xmatters/xm-labs-handy-fl
 # Custom Flow Steps
 The custom flow steps are...
 *	Get Site ID
-	<kbd>  <img src="/media/get_site_id.png" width="250"> </kbd>
+  
+	<kbd>  <img src="/media/get_site_id.png" width="200"> </kbd>
  
 Every user in xMatters must be assigned to a site, even if that site is just the built-in Default Site. Use this step to obtain a site's UUID from its name. The UUID is required for xMAPI calls. Unusually, you cannot use the site's name in most xMAPI calls. Nor can you obtain the Site's UUID by looking in the xMatters UI, so retrieving via API is the only way. The step also returns a full site object with all site details, e.g. address. The site object is easy to parse in a subsequent step. You can run the <b>Get Site ID</b> step in reverse too, i.e. supply a UUID as input instead of a name.
 
 *	Create xM User
-	<kbd>  <img src="/media/create_xm_user.png" width="250"> </kbd>
+  
+	<kbd>  <img src="/media/create_xm_user.png" width="200"> </kbd>
  
 Create a new user in xMatters, complete with an associated Work Email device.  Although this doesn't include every single "Person" field available through the API, we hope it includes the most useful ones.  The flow step is more forgiving than the naked API in several respects, e.g. you can pass in user names for Supervisors and a site name for Site (rather than UUIDs).  If no roles are specified, the Standard User role is assumed. Choose between Stakeholder and Full User licence types. You can even set custom property values on the user profile, e.g. Job Title, via a JSON object, although the custom properties have to be pre-congfigured in the UI. Please be aware, creating users via xMAPI counts towards your total User License count. You can view your count under Admin > General Settings. When you have reached your licese count, xMAPI will not allow you to create any more users. You can either use the step below, Delete xM User, to reduce the number of users in the system. Alternatively, your Everbridge account manager will be happy to discuss other options.
 
 *	Delete xM User
-	<kbd>  <img src="/media/delete_xm_user.png" width="250"> </kbd>
+
+	<kbd>  <img src="/media/delete_xm_user.png" width="200"> </kbd>
  
 Delete a user from xMatters with either the User ID (aka user name, targetName, login) or UUID. This is a permanent operation. When a user has been deleted, they cannot be restored. You can recreate an equivalent account with Create xM User step but the underlying UUID will be different and the account history will be lost.
 
 *	xM Get User
-	<kbd>  <img src="/media/xm_get_user.png" width="250"> </kbd>
+
+	<kbd>  <img src="/media/xm_get_user.png" width="200"> </kbd>
  
 Get an xMatters user object by passing in either the User ID (a.k.a. username or targetName) or UUID.
 
 
 *	xM Get User From Name
-	<kbd>  <img src="/media/xm_get_user_from_name.png" width="250"> </kbd>
+
+	<kbd>  <img src="/media/xm_get_user_from_name.png" width="200"> </kbd>
  
 Get an xMatters user object by passing in a proper name, e.g. Taylor Swift. If you pass just one name, it is assumed to be the first name. Therefore both "Taylor" and "Taylor Swift" return Taylor Swift's user object. However, "Taylor Sw" does not work as the last name is Swift, not Sw. This step is not case-sensitive. 
 
 *	Is User Member of Group?
-	<kbd>  <img src="/media/is_user_member_of_group.png" width="250"> </kbd>
+	<kbd>  <img src="/media/is_user_member_of_group.png" width="2)0"> </kbd>
  
 Is the User a member of a certain group in xMatters? The step tries to offer a reason the user is/isn't a member, e.g. no such group, which can be useful for trouble-shooting.
 
 *	xM Remove User from SOME Groups
+
 	<kbd>  <img src="/media/xm_remove_user_from_some_groups.png" width="250"> </kbd>
  
 Remove a user from one of more xMatters groups. Also lets you remove directly-targeted devices, e.g taylor.swift@example.com . You can specify a user, a specific device, or a device type, or an 'AND' combination of user + device + types If you pass in a device name, any user who happens to have that device directly targeted will also be removed from the group. If you pass in only a deviceName/deviceType, it removes all such devices from the group. Inputs are not case-sensitive.
 
 *	xM User Set Active
-	<kbd>  <img src="/media/xm_user_set_active.png" width="250"> </kbd>
+
+	<kbd>  <img src="/media/xm_user_set_active.png" width="200"> </kbd>
  
 Ensure an xMatters user account is active. Can also be used to do the reverse, i.e. set inactive. You can even ask the step to toggle, i.e. flip the switch the other way. N.B. Inactive users still consume a license. The only way to reduce license-count is to delete the user.
 
 *	Get Users From Email
-	<kbd>  <img src="/media/get_users_from_email.png" width="250"> </kbd>
+
+	<kbd>  <img src="/media/get_users_from_email.png" width="400"> </kbd>
  
 Returns a list of all xMatters users who have devices matching an email address. As there is no uniqueness requirement for email devices in xMatters, the same email can be attached to mulitple users. N.B. This is a combination of two steps, not a single step. The first step is the generic xMAPI Get Big Result, used to query every email in the instance and filter the results. The second step, Get Users From Email, parses the results. Think of it as a worked-up example with xmAPI Get Big Result. You can experiment with xMAPI Get Big Result in the section below.
 
 *	xMAPI Get Big Result
-	<kbd>  <img src="/media/xmapi_get_big_result.png" width="250"> </kbd>
+
+	<kbd>  <img src="/media/xmapi_get_big_result.png" width="200"> </kbd>
  
 Runs an arbitrary GET query from the xMatters API. Does a lot of the donkey-work for you, i.e. handles paging, trims the result object, filters the result set by searching for a specific property/value needle in the haystack.
 
 *  Stringify Object
-	<kbd>  <img src="/media/stringify_object.png" width="250"> </kbd>
+
+	<kbd>  <img src="/media/stringify_object.png" width="200"> </kbd>
  
 Bonus step. Nothing to do with xMAPI. Used to stringify a JSON object, so it displays nicely in the results email. Without it, an object would be shown as \[Object object\].  
 
