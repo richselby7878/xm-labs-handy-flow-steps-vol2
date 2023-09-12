@@ -87,9 +87,9 @@ Bonus step. Nothing to do with xMAPI. Used to stringify a JSON object, so it dis
 
 
 # Installation
-1. Log into xMatters as a user with either the Developer or Full Access User role. Navigate to Workflows, click the Import button on the top right and import the [xMattersHandyFlowStepsvolume2.zip](xMattersHandyFlowStepsvolume2.zip) file.
+1. Log into xMatters as a user with either the Developer or Full Access User role. Navigate to Workflows, click the Import button on the top right and import the [xMattersHandyFlowStepsvolume2.zip](xMattersHandyFlowStepsvolume2.zip) file. This is what you will see in the list of workflows:
 
- <kbd>  <img src="/media/xmatters_handy_flow_steps_volume2.png" width="750"> </kbd>
+ <kbd>  <img src="/media/xmatters_handy_flow_steps_volume2.png" width="850"> </kbd>
 	
 2. OPTIONAL. Navigate into the new workflow, either via the Open Workflow button after importing or from the workflow list. You will see a list of two forms. You need to set Sender Permissions on both forms. For <b>Run Flow Step kicker</b>, click the left-most of the two buttons to the right of the form (says Web UI) and then Sender Permissions at the bottom of the pop-up. Add the users or roles who can use the kicker form (form-based test interface) . We recommend allowing all those with Full Access User and Developer roles to use the form. Do the same for the other form, <b>Run Flow Step results</b>. The REST Web Service User role should be selected.
 
