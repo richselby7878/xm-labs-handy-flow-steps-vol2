@@ -87,21 +87,23 @@ Bonus step. Nothing to do with xMAPI. Used to stringify a JSON object, so it dis
 
 
 # Installation
-1. Log into xMatters as a user with either the Developer or Full Access User role. Navigate to Workflows, click the Import button on the top right and import the [xMattersHandyFlowStepsvolume2.zip](https://github.com/richselby7878/xm-labs-handy-flow-steps-vol2/blob/main/xMattersHandyFlowStepsvolume2.zip) file. It should be 45K. Alternatively, you can download the file via the link at the top of this page. This is what you will see in the list of workflows:
+1. Download the [xMattersHandyFlowStepsvolume2.zip](xMattersHandyFlowStepsvolume2.zip) zip file from this repo. Click the name, then the ... icon from the top right, then select Download. The downloaded file should take up around 45K of disk space. Do not inflate it. For some reason, if you choose Save Link As, the file successfully downloads and retains the .zip extesnion but takes up around 210K of space. It won't import into xMatters though.  Alternatively, you can download the file via the list of media at the top of this page. 
+   
+2. Log into xMatters as a user with either the Developer or Full Access User role. Navigate to Workflows, click the Import button on the top right and import the file. (. This is what you will see in the list of workflows:
 
  <kbd>  <img src="/media/xmatters_handy_flow_steps_volume2.png" width="850"> </kbd>
 	
-2. OPTIONAL. Navigate into the new workflow, either via the Open Workflow button after importing or from the workflow list. You will see a list of two forms. You need to set Sender Permissions on both forms. For <b>Run Flow Step kicker</b>, click the left-most of the two buttons to the right of the form (says Web UI) and then Sender Permissions at the bottom of the pop-up. Add the users or roles who can use the kicker form (form-based test interface). We recommend allowing all those with Full Access User or Developer roles to use the form. If you prefer, you can name specifc users. Do the same for the other form, <b>Run Flow Step results</b>. The same users/roles should be selected. (If you don't set Sender Permissions, only the user who imported the workflow can use/edit it.)
+3. OPTIONAL. Navigate into the new workflow, either via the Open Workflow button after importing or from the workflow list. You will see a list of two forms. You need to set Sender Permissions on both forms. For <b>Run Flow Step kicker</b>, click the left-most of the two buttons to the right of the form (says Web UI) and then Sender Permissions at the bottom of the pop-up. Add the users or roles who can use the kicker form (form-based test interface). We recommend allowing all those with Full Access User or Developer roles to use the form. If you prefer, you can name specifc users. Do the same for the other form, <b>Run Flow Step results</b>. The same users/roles should be selected. (If you don't set Sender Permissions, only the user who imported the workflow can use/edit it.)
 
  <kbd>  <img src="/media/sender_permissions.png" width="350"> </kbd>
  
 	
-3. OPTIONAL. By default, only the importing user has permission to use and modify the custom steps within the workflow. We recommend broadening permissions to allow all users with the Developer role to be able to use and/or edit the new flow steps. To do this, shift to the FLOW DESIGNER tab, just to the right of FORMS. Open the <b>Run Flow Step</b> flow canvas.
+4. OPTIONAL. By default, only the importing user has permission to use and modify the custom steps within the workflow. We recommend broadening permissions to allow all users with the Developer role to be able to use and/or edit the new flow steps. To do this, shift to the FLOW DESIGNER tab, just to the right of FORMS. Open the <b>Run Flow Step</b> flow canvas.
 
 	<kbd>  <img src="/media/run_flow_step_canvas.png" width="750"> </kbd>
  
 	
-4. To the right of the screen on the Palette, highlight the CUSTOM tab. Navigate to each new flow step in turn. Click the gear icon then Usage Permissions. In the pop-up window, grant ACCESS to other users/roles as required, e.g. select the Developer role and grant permission to Edit Step.
+5. To the right of the screen on the Palette, highlight the CUSTOM tab. Navigate to each new flow step in turn. Click the gear icon then Usage Permissions. In the pop-up window, grant ACCESS to other users/roles as required, e.g. select the Developer role and grant permission to Edit Step.
  
 	<kbd>  <img src="/media/step_usage_permissions.png" width="500"> </kbd>
 
