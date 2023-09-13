@@ -87,7 +87,7 @@ Bonus step. Nothing to do with xMAPI. Used to stringify a JSON object, so it dis
 
 
 # Installation
-1. Log into xMatters as a user with either the Developer or Full Access User role. Navigate to Workflows, click the Import button on the top right and import the [xMattersHandyFlowStepsvolume2.zip](xMattersHandyFlowStepsvolume2.zip) file. This is what you will see in the list of workflows:
+1. Log into xMatters as a user with either the Developer or Full Access User role. Navigate to Workflows, click the Import button on the top right and import the [xMattersHandyFlowStepsvolume2.zip](https://github.com/richselby7878/xm-labs-handy-flow-steps-vol2/blob/main/xMattersHandyFlowStepsvolume2.zip) file. It should be 45K. Alternatively, you can download the file via the link at the top of this page. This is what you will see in the list of workflows:
 
  <kbd>  <img src="/media/xmatters_handy_flow_steps_volume2.png" width="850"> </kbd>
 	
